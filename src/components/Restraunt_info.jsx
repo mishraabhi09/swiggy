@@ -2,8 +2,6 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { IMG_CDN_URL } from "../config";
 import { addItem } from "../utils/cartslice.jsx";
-import { removeItem } from "../utils/cartslice.jsx";
-import { clearCart } from "../utils/cartslice.jsx";
 import { useDispatch } from "react-redux";
 import Shimmer_UI from "./Shimmer_ui";
 
@@ -122,9 +120,9 @@ const Restraunt_info = () => {
 
                     <h6 className="res_locality">{restraunt.costForTwoMessage}</h6>
 
-                    <h6 className = "res_locality">{restraunt.sla.deliveryTime} mins</h6>
+                    <h6 className="res_locality">{restraunt.sla.deliveryTime} mins</h6>
 
-                    
+
 
                 </div>
 

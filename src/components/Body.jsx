@@ -1,4 +1,4 @@
-import { apidata } from "../config.jsx";
+// import { apidata } from "../config.jsx";
 import Swiggycard from "./justSwiggy.jsx";
 import { useState, useEffect } from "react";
 import Shimmer_UI from "./Shimmer_ui.jsx";

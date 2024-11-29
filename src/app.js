@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { Provider } from "react-redux";
 import Headercomponent from "./components/Header.jsx";
 import Body from "./components/Body.jsx";
 import Footer from "./components/Footer.jsx";
@@ -13,7 +14,6 @@ import Title from "./components/title.jsx";
 import Restraunt_info from "./components/Restraunt_info.jsx";
 import Profile from "./components/Profile.jsx";
 import Shimmer_UI from "./components/Shimmer_ui.jsx";
-import { Provider } from "react-redux";
 import Store from "./utils/store.jsx";
 
 
@@ -26,7 +26,7 @@ import Store from "./utils/store.jsx";
 // Dynamic Building
 
 
-const InstaMart = lazy(() => import("./components/instamart.jsx"));
+const InstaMart = lazy(() => import(("./components/instamart.jsx")));
 
 // Upon dynamic loading or we can say lazy loading -->> Upon render when does not found the component the asked page then it "suspend" the process at that particular moment .
 

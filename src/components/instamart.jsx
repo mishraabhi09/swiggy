@@ -2,6 +2,7 @@
 
 
 import { React, useState } from "react";
+import { InstaMart_items } from "./instaMart_items.jsx"
 
 
 const Section = ({ description, isVisible, setIsVisible }) => {
@@ -21,7 +22,7 @@ const Section = ({ description, isVisible, setIsVisible }) => {
 
                     <button
                         className="instamart_button"
-                        onClick={() => setIsVisible() }>Hide</button>
+                        onClick={() => setIsVisible()}>Hide</button>
 
                     :
 
@@ -42,7 +43,7 @@ const Section = ({ description, isVisible, setIsVisible }) => {
 };
 
 
-const InstaMart = () => {
+export const InstaMart = () => {
 
     const [visibleSection, setIsVisibleSection] = useState("about")
 
@@ -79,16 +80,21 @@ const InstaMart = () => {
                     setIsVisible={() => setIsVisibleSection("career")}
                 />
 
+                {/* Instamart cart data is coming from this component */}
 
-            </div>
+
+                <InstaMart_items />
+
+            </div >
         </>
     )
 }
 
-
-
-
 {/* This is prop drilling -->> we pass title , description and footer as a prop in section component */ }
+
+
+
+
 
 
 
