@@ -67,33 +67,50 @@ export const InstaMart_items = () => {
 
 
     return (
+
         <div className="instaMart_item">
-            <input
-                type="text"
-                className="input_instaMart"
-                placeholder="Search your item"
-                value={searchInput}
-                onChange={(e) => setSearchInput(e.target.value)}
-            />
-            <button className="btn" onClick={() => {
 
-                // Need to filter the data-->>
+            
 
-                const data = filterMartData(searchInput, MartItems);
-                console.log(data);
-                setFilteredMartItems(data);
-
-            }}>
-                Search
-            </button>
+            <div className="insta_searchSection">
+                <input
+                    type="text"
+                    className="instaMart_input"
+                    placeholder="Search item"
+                    value={searchInput}
+                    onChange={(e) => setSearchInput(e.target.value)}
+                />
 
 
-            {(MartItems==0) ? (<Shimmer_ui_insta/>) : < div className="instaMart_body">
+
+                <button className="btn" onClick={() => {
+
+                    // Need to filter the data-->>
+
+                    const data = filterMartData(searchInput, MartItems);
+                    console.log(data);
+                    setFilteredMartItems(data);
+
+                }}>
+                    Search
+
+                </button>
+
+            </div>
+
+
+
+
+
+            {(MartItems == 0) ? (<Shimmer_ui_insta />) : < div className="instaMart_body">
                 {filteredMartItems?.map((MartItem) => (
                     <InstaMart_card key={MartItem?.nodeId} {...MartItem} /> // Correctly pass props to the InstaMart_card
                 ))}
             </div>}
-            
+
+
+
+
         </div >
     );
 };

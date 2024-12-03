@@ -418,7 +418,7 @@ body {
 
 .instaMart_body {
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-color: #9e9e9e3b;
     width: 1000px;
     height: 1300px;
@@ -426,6 +426,7 @@ body {
     border-radius: 30px 30px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 50px;
 
 }
 
@@ -434,7 +435,7 @@ body {
 
     height: 170px;
     width: 170px;
-    margin: 15px 12px;
+    margin: 15px 15px;
 
 }
 
@@ -457,4 +458,32 @@ body {
     margin-left: 20px;
     background-color: #ffffff;
     border-radius: 20px 20px;
+
+}
+
+.instaMart_input {
+
+    padding: 10px 10px;
+    width: 750px;
+    font-size: 1rem;
+    margin-left: 60px;
+    margin-bottom: 50px;
+    border-radius: 10px 10px;
+    border: none;
+    margin-top: 50px;
+    margin-right: 40px;
+
+
+
+}
+
+.insta_searchSection {
+
+    height: 150px;
+    /* border-radius: top-left , top-right, bottom-right, bottom-left; */
+    border-radius: 30px 30px 30px 30px;
+    margin: auto;
+    width: 1000px;
+    background-color: rgb(4, 4, 100);
+
 }
