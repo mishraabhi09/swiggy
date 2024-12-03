@@ -57,7 +57,8 @@ const Restraunt_info = () => {
 
     async function getRestraunt() {
 
-        try {
+        try 
+        {
             const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9634&lng=77.5855&restaurantId=${resId}`);
             const response = await data.json();
             console.log(response?.data);

@@ -15,19 +15,20 @@ const Swiggycard = ({ cloudinaryImageId, name, cuisines, avgRating, locality, us
 
             <div className="heading">
 
-                
+
                 <h4 className="card_link1">{name}</h4>
                 <h5 className="card_link2">
 
-                    <img className="star_icon" src ="https://cdn2.iconfinder.com/data/icons/greenline/512/star-512.png" alt ="star_icon">
-                       
-                    
+                    <img className="star_icon" src="https://cdn2.iconfinder.com/data/icons/greenline/512/star-512.png" alt="star_icon">
+
+
                     </img> {avgRating}</h5>
 
 
                 <h5 className="card_links">{cuisines.join(",")}</h5>
                 <h5 className="card_links">{locality}</h5>
-                
+
+
                 {/* <h6>{user.email}</h6>
                 <h6>{user1.email}</h6> */}
             </div>

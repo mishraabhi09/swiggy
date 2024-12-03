@@ -93,6 +93,7 @@ export const InstaMart_items = () => {
                     <InstaMart_card key={MartItem?.nodeId} {...MartItem} /> // Correctly pass props to the InstaMart_card
                 ))}
             </div>}
+            
         </div >
     );
 };
