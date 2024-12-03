@@ -1,9 +1,8 @@
-// import { apidata } from "../config.jsx";
-import Swiggycard from "./justSwiggy.jsx";
 import { useState, useEffect } from "react";
-import Shimmer_UI from "./Shimmer_ui.jsx";
-import { filterdata } from "../utils/helper.jsx";
 import { Link } from "react-router-dom";
+import { filterdata } from "../utils/helper.jsx";
+import Swiggycard from "./justSwiggy.jsx";
+import Shimmer_UI from "./Shimmer_ui.jsx";
 
 
 // what/why are State??
@@ -30,6 +29,7 @@ const Body = ({ user }) => {
     // const [newRestraunt, setNewRestraunt] = useState(apidata);
 
     const [allRestraunt, setallRestraunt] = useState([]);
+    
     const [filteredRestraunt, setfilteredRestraunt] = useState([]);
 
     // const restraunt = useRestraunt();
@@ -64,6 +64,7 @@ const Body = ({ user }) => {
             const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
 
             const json = await data.json();
+
             console.log(json);
 
             setallRestraunt(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
@@ -103,12 +104,16 @@ const Body = ({ user }) => {
                     value={searchInput}
                     onChange={(e) =>
                         // (e).target.value -->> Gives whatever you write in input
-                        setSearchInput(e.target.value)} />
+                        setSearchInput(e.target.value)}
+
+                />
 
 
                 <button className="btn" onClick={() => {
 
                     // need to filter the data -->> 
+
+
                     const data = filterdata(searchInput, allRestraunt)
 
                     // Update the state -->> newRestraunt
@@ -118,7 +123,11 @@ const Body = ({ user }) => {
 
                     setfilteredRestraunt(data);
 
-                }}>Search</button>
+                }}>
+
+                Search
+
+                </button>
             </div >
 
 

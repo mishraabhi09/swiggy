@@ -27,6 +27,7 @@ const Swiggycard = ({ cloudinaryImageId, name, cuisines, avgRating, locality, us
 
                 <h5 className="card_links">{cuisines.join(",")}</h5>
                 <h5 className="card_links">{locality}</h5>
+                
                 {/* <h6>{user.email}</h6>
                 <h6>{user1.email}</h6> */}
             </div>

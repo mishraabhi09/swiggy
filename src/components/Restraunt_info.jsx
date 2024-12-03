@@ -56,6 +56,7 @@ const Restraunt_info = () => {
     }, [resId]);  // Add resId as a dependency to the useEffect
 
     async function getRestraunt() {
+
         try {
             const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9634&lng=77.5855&restaurantId=${resId}`);
             const response = await data.json();
@@ -71,9 +72,11 @@ const Restraunt_info = () => {
             setAllMenu(menuCards?.flatMap(card => card.card?.card?.itemCards) || []);
             console.log(menuCards);
         }
+
         catch (error) {
             console.error("Failed to fetch restaurant data", error);
         }
+        
     }
 
     return !restraunt ? (
