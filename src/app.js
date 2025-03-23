@@ -18,6 +18,8 @@ import Store from "./utils/store.jsx";
 
 
 
+
+
 // Chunking 
 // code spilliting  
 // dynamic Import
@@ -27,6 +29,8 @@ import Store from "./utils/store.jsx";
 
 
 const InstaMart = lazy(() => import(("./components/instamart.jsx")));
+
+const Cities = lazy(() => import(("./components/Cities.jsx")));
 
 // Upon dynamic loading or we can say lazy loading -->> Upon render when does not found the component the asked page then it "suspend" the process at that particular moment .
 
@@ -58,7 +62,8 @@ const AppLayout = () => {
             <Outlet />
             <Footer />
 
-            
+
+
         </Provider>
 
 
@@ -73,7 +78,7 @@ const appRouter = createBrowserRouter([
         errorElement: <Error />,
         children: [
             {
-                path: "/",
+                path: "/Home",
                 element: <Body user={({
                     name: "Abhinav",
                     email:
@@ -92,22 +97,39 @@ const appRouter = createBrowserRouter([
 
 
             },
+
+
+
             {
                 path: "/Contact",
                 element: <Contact />,
             },
-            , {
+
+
+            {
                 path: "/Cart",
                 element: <Cart />
             },
+
+
             {
                 path: "/Restraunt_info/:resId",
                 element: <Restraunt_info />
             },
+
+
             {
                 path: "/Instamart",
                 element: <Suspense fallback={<Shimmer_UI />}>
                     <InstaMart />
+                </Suspense>
+            },
+
+
+            {
+                path: "/Cities",
+                element: <Suspense fallback={<Shimmer_UI />}>
+                    <Cities />
                 </Suspense>
             }
 

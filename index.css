@@ -8,10 +8,9 @@
 }
 
 body {
-    /* background-color: #e2e7e65a; */
+
     background-color: #e2e7e6ab;
 }
-
 
 
 
@@ -158,7 +157,8 @@ body {
 }
 
 .card_link1:hover {
-    text-decoration: underline grey;
+    text-decoration: underline #ff5204;
+    color: #ff5204;
 }
 
 .card_link2 {
@@ -253,6 +253,23 @@ body {
     font-size: 1.1rem;
 
 }
+
+.add_food_button:hover {
+
+    /* background-color:#424242 ; */
+    /* background-color:#B0BEC5; */
+    /* background-color:#E0E0E0; */
+    background-color: #61616145;
+    /* background : linear-gradient(90deg, #ECEFF1, #CFD8DC); */
+    /* background : linear-gradient(90deg, #ECEFF1, #CFD8DC); */
+    /* background :linear-gradient(90deg,#B0BEC5, #CFD8DC); */
+    transform: scale(1.05);
+    color: #1d7555;
+
+}
+
+
+
 
 .Restrauntinfo {
     /* background-color: rgb(41, 87, 62); */
@@ -401,27 +418,232 @@ body {
 }
 
 
-.footer_text {
 
-    font-size: 2rem;
-    font-family: monospace;
-    font-weight: 500;
-    margin-left: 10px;
+/* footer */
 
+
+
+
+.footer {
+
+    height: 700px;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    /* border-radius: 50px; */
+    background-color: rgba(255, 255, 255, 0.824);
 
 
 }
 
 
-/* InstaMart_section */
 
+.footer_text {
+
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3d4152;
+    margin-top: 5%;
+    margin-left: 15%;
+    display: flex;
+    align-items: center;
+    width: 75%;
+    /* border: 1px solid black; */
+
+
+}
+
+.footer_body {
+
+    color: #3d4152;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: 2.5fr 2.5fr 2.5fr 2.5fr;
+    /* border: 1px solid black; */
+    height: 400px;
+    width: 80%;
+    margin-left: 13%;
+    margin-top: 0%;
+
+}
+
+
+.footer1_img {
+
+    height: 75px;
+    width: 190px;
+    margin-left: 1%;
+    cursor: pointer;
+
+}
+
+
+.footer2_img {
+
+    height: 75px;
+    width: 190px;
+    margin-left: 1.5%;
+    cursor: pointer;
+
+}
+
+/* .box {
+    border: 1px solid red;
+} */
+
+
+
+.swiggy_text {
+
+    color: #ff5204;
+    font-size: 2.1rem;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    margin-left: 30%;
+
+}
+
+.swiggy_logo {
+    margin-top: 37%;
+    margin-left: 30%;
+}
+
+.swiggy_limited {
+
+    color: #02060ca8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin-left: 25%;
+
+}
+
+.box2 {
+
+    padding-top: 32%;
+    padding-left: 20%;
+
+}
+
+.box2 p {
+
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+
+}
+
+
+.box2 p:hover {
+    cursor: pointer;
+
+}
+
+
+
+.box3 {
+
+    padding-top: 32%;
+    padding-left: 20%;
+
+}
+
+.box3 p:hover {
+    cursor: pointer;
+
+}
+
+.box3 p {
+
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+
+
+.lifeatSwiggy {
+
+    /* border: 1px solid black; */
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30%;
+    margin-left: 8%;
+
+}
+
+.lifeatSwiggy p:nth-child(1) {
+
+    margin-top: 20px;
+
+}
+
+
+.part4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+
+}
+
+.part4:hover {
+    cursor: pointer;
+}
+
+.box4 {
+
+    display: flex;
+    flex-direction: column;
+    gap: 0%;
+
+
+}
+
+p:nth-child(1) {
+
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 550;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.social_links {
+
+    /* border: 1px solid black; */
+    height: 200px;
+    margin-left: 5%;
+
+}
+
+.social_links p:nth-child(1) {
+    margin-top: 8%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
+
+.social_icons {
+
+    margin-left: 5%;
+    height: 18px;
+    width: 17px;
+    cursor: pointer;
+}
+
+/* InstaMart_section */
 
 .instaMart_body {
 
     /* border: 1px solid red; */
-    background-color: #9e9e9e3b;
-    width: 1000px;
-    height: 1300px;
+    background-color: #9e9e9e2f;
+    width: 900px;
+    height: 700px;
     margin: auto;
     border-radius: 30px 30px;
     display: flex;
@@ -433,9 +655,9 @@ body {
 
 .insta_image {
 
-    height: 170px;
-    width: 170px;
-    margin: 15px 15px;
+    height: 150px;
+    width: 160px;
+    margin: 15px 30px;
 
 }
 
@@ -443,47 +665,130 @@ body {
     font-family: "Poppins", serif;
     font-size: 0.9rem;
     font-weight: 500;
-    margin-left: 15px;
+    margin-left: 40px;
     margin-top: 5px;
-}
-
-.insta_card {
-
-
-    height: 170px;
-    width: 170px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    margin-left: 20px;
-    background-color: #ffffff;
-    border-radius: 20px 20px;
 
 }
 
 .instaMart_input {
 
-    padding: 10px 10px;
+    padding: 15px 15px;
     width: 750px;
     font-size: 1rem;
-    margin-left: 60px;
-    margin-bottom: 50px;
     border-radius: 10px 10px;
     border: none;
-    margin-top: 50px;
-    margin-right: 40px;
-
-
+    margin-left: 25%;
+    margin-right: 2%;
+    margin-top: 4%;
 
 }
 
 .insta_searchSection {
 
-    height: 150px;
-    /* border-radius: top-left , top-right, bottom-right, bottom-left; */
-    border-radius: 30px 30px 30px 30px;
+    height: 180px;
+    border-radius: 0px 0px 0px 0px;
     margin: auto;
-    width: 1000px;
-    background-color: rgb(4, 4, 100);
+    width: 100%;
+    background-color: #fff6fb;
+}
 
+
+
+
+
+.city_section {
+    height: 850px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-left: 20px;
+    /* border: 1px solid black; */
+    margin-top: 3%;
+
+
+
+}
+
+
+
+.city_names {
+
+    /* border: 1px solid red; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    width: 250px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px;
+    background-color: #d2d2d27e;
+
+
+}
+
+
+.Shimmer_cities {
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100%;
+    height: 850px;
+    flex-wrap: wrap;
+    column-gap: 100px;
+
+
+}
+
+
+.Shimmer_City_Cards {
+    margin-top: 2%;
+    height: 60px;
+    width: 300px;
+    border-radius: 10px 10px;
+    background-color: #e3e3e7ef;
+
+}
+
+.pagination_controls {
+    /* border: 1px solid red; */
+    height: 50px;
+    width: 18%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+}
+
+.button {
+    height: 45px;
+    width: 100px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px 15px;
+    margin-left: 8%;
+    border: none;
+    background-color: #ff5100;
+}
+
+.button:hover {
+    cursor: pointer;
+
+}
+
+.exploreSwiggy {
+    /* border: 1px solid red; */
+    color: #ff5204;
+    width: 20%;
+    margin-left: 38%;
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.city_link {
+    text-decoration: none;
+    color: rgb(48, 48, 48);
 }

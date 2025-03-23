@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { filterdata } from "../utils/helper.jsx";
 import Swiggycard from "./justSwiggy.jsx";
 import Shimmer_UI from "./Shimmer_ui.jsx";
+import BestRestraunt from "./BestRestraunt.jsx";
 
 
 // what/why are State??
@@ -24,12 +25,12 @@ const Body = ({ user }) => {
 
     // set -->> This function gives the functionality to search the text.
 
-    const [searchInput, setSearchInput] = useState("Search for restaurants and food"); // => returns [variable_name,function to update the variable]
+    const [searchInput, setSearchInput] = useState("Search for restaurants"); // => returns [variable_name,function to update the variable]
 
     // const [newRestraunt, setNewRestraunt] = useState(apidata);
 
     const [allRestraunt, setallRestraunt] = useState([]);
-    
+
     const [filteredRestraunt, setfilteredRestraunt] = useState([]);
 
     // const restraunt = useRestraunt();
@@ -61,7 +62,8 @@ const Body = ({ user }) => {
 
         try {
 
-            const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+            const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9753&lng=77.591&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+
 
             const json = await data.json();
 
@@ -110,7 +112,7 @@ const Body = ({ user }) => {
 
 
                 <button className="btn" onClick={() => {
-                    
+
 
                     // need to filter the data -->> 
 
@@ -126,7 +128,7 @@ const Body = ({ user }) => {
 
                 }}>
 
-                Search
+                    Search
 
                 </button>
             </div >
@@ -142,6 +144,9 @@ const Body = ({ user }) => {
 
                 {console.log(Array.isArray(allRestraunt))}
                 {console.log(Array.isArray(filteredRestraunt))}
+
+
+                <BestRestraunt />
 
 
 

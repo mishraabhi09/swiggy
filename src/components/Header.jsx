@@ -70,6 +70,7 @@ const Headercomponent = () => {
                     <Link className="navbar_links" to="/about"><li>About</li></Link>
                     <Link className="navbar_links" to="/Contact"><li>Contact</li></Link>
                     <Link className="navbar_links" to="/Instamart"><li>InstaMart</li></Link>
+                    <Link className="navbar_links" to="/Cities"><li>Cities</li></Link>
                     <Link className="navbar_links" to="/Cart"><li>Cart - {cartItems.length}</li></Link>
                 </ul>
             </div>

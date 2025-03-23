@@ -30,7 +30,10 @@ export const InstaMart_items = () => {
     async function getMartItems() {
 
         try {
-            const data = await fetch("https://www.swiggy.com/api/instamart/home?clientId=INSTAMART-APP");
+
+            const data = await fetch("https://www.swiggy.com/api/instamart/home?pageNo=1&layoutId=2671&storeId=1313712&primaryStoreId=1313712&secondaryStoreId=1403020&clientId=INSTAMART-APP");
+
+
             const response = await data.json();
             console.log(response?.data);
 
@@ -70,7 +73,7 @@ export const InstaMart_items = () => {
 
         <div className="instaMart_item">
 
-            
+
 
             <div className="insta_searchSection">
                 <input

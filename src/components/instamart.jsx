@@ -50,7 +50,7 @@ export const InstaMart = () => {
     return (
         <>
             <div>
-
+                {/* 
                 <Section className="Instamart"
 
 
@@ -80,7 +80,7 @@ export const InstaMart = () => {
                     setIsVisible={() => setIsVisibleSection("career")}
                 />
 
-                {/* Instamart cart data is coming from this component */}
+                Instamart cart data is coming from this component */}
 
 
                 <InstaMart_items />
