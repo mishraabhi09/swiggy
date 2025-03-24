@@ -32,6 +32,8 @@ const InstaMart = lazy(() => import(("./components/instamart.jsx")));
 
 const Cities = lazy(() => import(("./components/Cities.jsx")));
 
+const BestRestraunt = lazy(() => import(("./components/BestRestraunt.jsx")))
+
 // Upon dynamic loading or we can say lazy loading -->> Upon render when does not found the component the asked page then it "suspend" the process at that particular moment .
 
 // And when the data is available or code is available then it does reconciliation process and loades it dynamically.
@@ -130,6 +132,13 @@ const appRouter = createBrowserRouter([
                 path: "/Cities",
                 element: <Suspense fallback={<Shimmer_UI />}>
                     <Cities />
+                </Suspense>
+            },
+
+            {
+                path: "/bestRestraunt",
+                element: <Suspense fallback={<Shimmer_UI />}>
+                    <BestRestraunt />
                 </Suspense>
             }
 

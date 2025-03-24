@@ -100,7 +100,7 @@ const Cities = ({ text, link }) => {
         try {
             setLoading(true);
             const response = await fetch(
-                `https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.97530&lng=77.59100&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING&page=${currentPage}&pageSize=${pageSize}` + { index }
+                `https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.97530&lng=77.59100&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING&page=${currentPage}&pageSize=${pageSize}` 
             );
             const json = await response.json();
             const fetchedCities = json?.data?.cards[10]?.card?.card?.cities || [];
@@ -129,17 +129,7 @@ const Cities = ({ text, link }) => {
 
 
             <span className="exploreSwiggy">🍕🍔Explore in All Cities</span>
-            {/* 
-            <div className="city_section">
 
-                {loading ? (
-                    <Shimmer_Cities />
-                ) : cities.length ? (
-                    cities.map((city, index) => <Link to={`/city/${city.id || city.link}`}><div className="city_names" key = {index} >{city.text}</div></Link>)
-                ) : (
-                    <p>No cities found.</p>
-                )}
-            </div> */}
 
             <div className="city_section">
 
